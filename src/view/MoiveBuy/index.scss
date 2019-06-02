@@ -1,0 +1,113 @@
+.movieBuyContent{
+     width: 80%;
+     margin: 60px auto;
+     min-height: 400px;
+
+
+     .MovieBuySeat {
+        // border: 1px red solid;
+        min-height: 400px;
+        margin-top:50px;
+        box-shadow: 0px 0px 3px gray;
+
+        .seatLeft {
+            // border: 1px red solid;
+            min-height: 600px;
+
+            .seatAll{
+                display: flex;
+                flex-direction: column;
+                min-height: 600px;
+
+                .seatHeader {
+                    flex:1;
+                    display: flex;
+                    justify-content: center;
+
+                    .seatRow {
+                        margin-top: 15px;
+                        text-align: center;
+                        width: 80%;
+                    }
+                }
+
+                .seatMovie {
+                    // border: 1px red solid;
+                    flex:1;
+                    position: relative;
+
+                    div {
+                        width: 70%;
+                        height: 30px;
+                        margin: 20px auto;
+                        background-color: white;
+                        box-shadow: 0px 3px gray;
+                    }
+                    span {
+                        position: absolute;
+                        left: 48%;
+                    }
+                }
+
+                .seatBody {
+                    // border: 1px black solid;
+                    flex:10;
+                    display: flex;
+                    flex-wrap:wrap;
+                    width: 80%;
+                    margin: 10px auto;
+
+                    .ItSeat {
+                        // flex-basis: 10%;
+                        height: 30px;
+                        // border: 1px red solid
+                    }
+                }
+
+            }
+
+
+
+
+
+        }
+        .seatRight {
+            padding: 15px;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(240, 240, 240);
+
+            div{
+                // border: 1px red solid;
+            }
+
+            .seatRight1 {
+                flex:1;
+                overflow: hidden;
+                // padding-top:15px;
+
+                img {
+                    width: 80%;
+                }
+                p {
+                    color: black;
+                }
+            }
+            .seatRight2 {
+                flex:3;
+                line-height: 15px;
+            }
+            .seatRight3 {
+                flex:3
+            }
+            .seatRight4 {
+                flex:3;
+                text-align: center;
+            }
+        }
+     }
+}
+.seatItem {
+    width: 30px;
+}

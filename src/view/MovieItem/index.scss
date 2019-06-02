@@ -1,0 +1,89 @@
+.back {
+    width: 100%;
+    min-height: 350px;
+    background-image: url('/img/background.png');
+    color: #fff;
+
+    .movieValue {
+        width: 50%;
+        // border: 1px red solid;
+        height: 320px;
+        position: relative;
+        left: 180px;
+        top:50px;
+
+        img {
+            width: 100%;
+            border: 3px white solid;
+        }
+        
+        .movievalue {
+            // border: 1px solid wheat;
+            .movieName2 {
+                // border: 1px solid wheat;
+                height: 200px;
+            }
+            .buttonGroup {
+                // border: 1px solid wheat;
+                .button {
+                    background-color: rgba(255,255,255,.5);
+                    color: #FFF;
+                    width:100%;
+                    border: none;
+                }
+                .buttonBuy {
+                    background-color:rgba(239,66,56,.9); 
+                }
+            }
+        }
+
+        .movieRate {
+            position: relative;
+            // border: 1px solid wheat;
+            .nocontent{
+                height: 150px;
+            }
+    
+            div {
+                // border: 1px solid wheat
+            }
+           
+        }
+    }
+    
+   
+}
+
+.movieContent {
+    width: 80%;
+    // border: 1px black solid;
+    margin:30px auto;
+    min-height: 800px;
+    padding: 5px;
+
+    .movieSelf {
+        min-height: 800px;
+        // border: 1px yellow solid;
+
+        h2 {
+            color:rgb(239,66,56);
+          }
+          
+        .movieAbout {
+            margin: 5px 5px;
+            font-size: 14px;
+            color: #000;
+            font-family: Microsoft YaHei,Helvetica,Arial,sans-serif;
+            line-height: 25px;
+            
+           
+        }
+    }
+
+    .movieMore {
+        min-height: 800px;
+        // border: 1px pink solid;
+
+        padding: 40px;
+    }
+}

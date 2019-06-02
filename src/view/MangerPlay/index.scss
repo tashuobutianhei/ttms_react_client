@@ -1,0 +1,21 @@
+.RankPartItemImg {
+
+    img {
+        width: 80%;
+        height: 230px;
+    }
+}
+
+.MoviePlay_RankPartItemValueDiv {
+    div {
+        text-align: left;
+        border-bottom: 1px solid black;
+        // height: 200px;
+        h1 {
+            font-size: 35px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+    }
+}

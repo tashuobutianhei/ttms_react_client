@@ -1,0 +1,24 @@
+.title {
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+    .titleFont{
+        font-size: 26px;
+    }
+    .titleAll {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
+
+.rankP{
+    cursor: pointer;
+
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border: 1px #ffffff solid;
+    color: rgb(255, 180, 0);
+    font-family: 'Times New Roman', Times, serif
+}

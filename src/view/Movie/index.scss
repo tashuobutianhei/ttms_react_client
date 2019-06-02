@@ -1,0 +1,32 @@
+.MovieContent {
+    // border: 1px solid red;
+    width: 80%;
+    margin: 10px auto;
+
+    .Moviewhich {
+        text-align: center;
+       
+    }
+
+    .Moviechoice {
+        // border: 1px solid black;
+        .chocieItem {
+            margin: 10px 0;
+            padding: 10px 10px;
+        }
+    }
+    
+    .Moviepaixu {
+        margin: 10px 0;
+    }
+
+    .MovieItem {
+        margin: 10px 0;
+    }
+    .Moviecount {
+        text-align: center;
+        margin: 40px;
+
+      
+    }
+}

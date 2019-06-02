@@ -1,0 +1,33 @@
+.movieContent {
+    width: 80%;
+    // border: 1px black solid;
+    margin:30px auto;
+    min-height: 800px;
+    padding: 5px;
+
+    .movieSelf {
+        min-height: 800px;
+        // border: 1px yellow solid;
+
+        h2 {
+            color:rgb(239,66,56);
+          }
+          
+        .movieAbout {
+            margin: 5px 5px;
+            font-size: 14px;
+            color: #000;
+            font-family: Microsoft YaHei,Helvetica,Arial,sans-serif;
+            line-height: 25px;
+            
+           
+        }
+    }
+
+    .movieMore {
+        min-height: 800px;
+        // border: 1px pink solid;
+
+        padding: 40px;
+    }
+}

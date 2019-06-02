@@ -1,0 +1,41 @@
+.footer {
+    text-align: center;
+    background-color: rgba(0,21,41,1);
+    color:white;
+}
+.content {
+  
+    .contentAll {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        .autocom {
+            margin: 20px auto;
+        }
+
+        .ant-carousel .slick-slide {
+            text-align: center;
+            height: 450px;
+            line-height: 400px;
+            background: #364d79;
+            overflow: hidden;
+          }
+          
+        .ant-carousel .slick-slide h3 {
+            color: #fff;
+        }
+
+        .part {
+          
+            margin: 30px auto;
+
+            .partItem {
+                padding: 20px;
+                overflow: hidden;
+                margin: 30px auto;
+            }
+        }
+    }
+
+}

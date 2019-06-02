@@ -1,0 +1,18 @@
+.MangerSeatBody {
+    // border: 1px black solid;
+    display: flex;
+    flex-wrap:wrap;
+    width: 80%;
+    margin: 10px auto;
+    // border: 1px red solid;
+
+    .MangerItSeat {
+        height: 30px;
+
+        img{
+            width: 30px;
+            height: 30px;
+       }
+    }
+  
+}

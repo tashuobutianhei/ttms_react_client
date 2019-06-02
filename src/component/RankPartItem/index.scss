@@ -1,0 +1,46 @@
+.RankPartItemContent {
+    // border: 1px red solid;
+    height: 200px;
+    
+    .RankPartItemTop {
+        
+        div {
+            margin: 70px auto;
+            height: 50px;
+            width: 50px;
+            background-color: #cccccc;
+            line-height: 50px;
+        }
+    }
+    .RankPartItemImg {
+
+        img {
+            width: 80%;
+            height: 200px;
+        }
+    }
+
+    .RankPartItemValue {
+        div {
+            text-align: left;
+            border-bottom: 1px solid black;
+            height: 200px;
+            h1 {
+                font-size: 35px
+            }
+        }
+    }
+
+    .RankPartItemRank {
+        div {
+            margin: 70px auto;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 50px;
+            color: rgb(255, 180, 0);
+            font-family: 'Times New Roman', Times, serif
+        }
+    }
+    
+}

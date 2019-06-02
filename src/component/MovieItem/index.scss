@@ -1,0 +1,68 @@
+.movieItem {
+    // border: 1px pink solid;
+    box-shadow: 0px 0px 1px #666666;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    .MoiveTag{
+        position: absolute;
+        top:0;
+        background-color:  rgb(239,66,56);
+        color: #FFF;
+        // border: 1px pink solid;
+        z-index: 10;
+        padding: 1px 13px;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+    .movieName {
+        color: rgb(239,66,56);
+        height: 30px;
+    }
+
+    .MovieItemModel {
+        width: 100%;
+        background:rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top:0;
+        bottom: 25px;
+        color: white;
+        display: none;
+
+
+        .MovieItemModelValue {
+            position: relative;
+            top: 40px;
+
+            span {
+                display: inline-block;
+                margin-left:5px;
+                color: rgb(255,1081,3);
+                font-weight: 400;
+            }
+        }
+    }
+    
+}
+
+.movieItem:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #888888 ;
+}
+
+.movieName:hover {
+    background-color: rgb(239,66,56);
+    color: #FFF;
+}
+
+
+.movieItem:hover .MovieItemModel{
+    display: block;
+}
