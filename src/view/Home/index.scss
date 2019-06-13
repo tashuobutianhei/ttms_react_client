@@ -17,9 +17,13 @@
         .ant-carousel .slick-slide {
             text-align: center;
             height: 450px;
-            line-height: 400px;
+            // line-height: 400px;
             background: #364d79;
             overflow: hidden;
+            img {
+                height: 450px;
+                width: 100%;
+            }
           }
           
         .ant-carousel .slick-slide h3 {

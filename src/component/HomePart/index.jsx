@@ -22,6 +22,9 @@ class HomePart extends React.Component {
       }
       render() {
         const date = this.props.movieValue
+        console.log(date)
+        // const allInfo =  this.props.movieValue
+        const status = this.props.status
         const color = {
             doing:'#ef4238',
             done:'#2d98f3',
@@ -54,13 +57,13 @@ class HomePart extends React.Component {
         return (
            <Row gutter={48} >
                <Col span={16}>
-                   <Row className="title" type="flex" justify="space-between" style={{color:`${Relatvie[date.status].color}`}}>
-                       <Col className="titleFont">{Relatvie[date.status].title}({date.movieDate.length}部)</Col>
+                   <Row className="title" type="flex" justify="space-between" style={{color:`${Relatvie[status].color}`}}>
+                       <Col className="titleFont">{Relatvie[status].title}({date.length}部)</Col>
                        <Col className="titleAll"><p onClick={this.gotoAll.bind(this)} >全部<Icon type="right" /></p></Col>
                    </Row>
                    <Row gutter={48}>
                        {
-                          date.movieDate.map((item,index)=>{
+                          date.map((item,index)=>{
                                 return (
                                     <Col span={6}  key={index} style={{marginBottom:'20px'}}>
                                        <MovieItem movieValue={item} ></MovieItem>
@@ -71,19 +74,19 @@ class HomePart extends React.Component {
                    </Row>
                </Col>
                <Col span={8}>
-                    <Row className="title" type="flex" justify="space-between" style={{color:`${Relatvie[date.status].color}`}}>
-                       <Col className="titleFont">{Relatvie[date.status].side}</Col>
+                    <Row className="title" type="flex" justify="space-between" style={{color:`${Relatvie[status].color}`}}>
+                       <Col className="titleFont">{Relatvie[status].side}</Col>
                        <Col className="titleAll"><p onClick={this.gotoRank.bind(this)}>查看完整榜单<Icon type="right" /></p></Col>
                    </Row>
                     <Row>
                     {
-                      date.movieList.map((item,index)=>{
+                      this.props.top.map((item,index)=>{
                           return (
-                            <div ey={index} className="rankP"  style={{color:`${Relatvie[date.status].sidecolor}`}}>
+                            <div key={index} className="rankP"  style={{color:`${Relatvie[status].sidecolor}`}}>
                                 <Row>
-                                    <Col span={3}>{item.rank}.</Col>
-                                    <Col span={16}>{item.name}</Col>
-                                    <Col span={5}>{item.name}{Relatvie[date.status].el}</Col>
+                                    <Col span={3}>{item.index}.</Col>
+                                    <Col span={16}>{item.filmName}</Col>
+                                    <Col span={5}>{item.filmScore}{Relatvie[status].el}</Col>
                                 </Row>
                             </div>
                           )

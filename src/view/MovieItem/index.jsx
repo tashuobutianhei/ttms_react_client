@@ -8,6 +8,8 @@ import MoiveBuy from '../MoiveBuy/index'
 
 import 'antd/dist/antd.css'
 import  './index.scss'
+import axios from 'axios'
+axios.defaults.withCredentials = true
 
 
 const map = ['value','time'] 
@@ -19,11 +21,21 @@ class MovieItem extends React.Component {
         this.state = {
             path:match,
             // movieId:this.props.match.params.movieId
+            movieInfo:''
         }
       }
       componentWillMount(){
         
-        this.props.history.push(`/MovieItem/${this.props.match.params.movieId}/${this.state.path}`)
+        this.props.history.push(`/MovieItem/${this.props.match.params.movieId}/${this.state.path}`);
+        axios({
+            url:`/film/films/${this.props.match.params.movieId}?searchType=0`,
+            method:'get'
+        }).then(res=>{
+            this.setState({
+                movieInfo:res.data.data
+            })
+        })
+
       }
       buttonClickHandle() {
         if(this.state.path === 'value') {
@@ -40,19 +52,19 @@ class MovieItem extends React.Component {
       }
       
       render() {        
-        return (
+        return ( 
             <div >
               <div className="back">
                 <Row className="movieValue" gutter={16}>
                     <Col span={8}>
-                        <img src='https://p1.meituan.net/movie/4c69bc105eb1b16344361a4f47a466b5266090.jpg@464w_644h_1e_1c'></img>
+                        <img src={`http://192.168.1.179:8080/${this.state.movieInfo.imgAddress}`}></img>
                     </Col>
                     <Col span={8} className="movievalue">
                         <div className="movieName2">
-                            <p>xxx</p>
-                            <p>xxx</p>
-                            <p>xxx</p>
-                            <p>xxx</p>
+                            <p>{this.state.movieInfo.filmName}</p>
+                            <p>{this.state.movieInfo.filmEnName}</p>
+                            <p>{this.state.movieInfo.info01}</p>
+                            <p>{this.state.movieInfo.info02}</p>
                         </div>
                         <div className="buttonGroup">
                             <Row gutter={16}>
@@ -70,18 +82,17 @@ class MovieItem extends React.Component {
                     <Col span={8} className="movieRate">
                         <div className="nocontent"></div>
                         <div>
-                            <p>用户评分</p>
+                            <p>用户评分{this.state.movieInfo.score}</p>
                             <Rate allowHalf defaultValue={4.5} />
-                            <p>用户评分</p>
                             <p>1.1亿</p>
                         </div>
                     </Col>
                 </Row> 
               </div>
                 <Switch>
-                    <Route  exact path="/MovieItem/:movieId/value" component={MoiveAbout}></Route>
-                    <Route  exact path="/MovieItem/:movieId/time" component={MoiveTime}></Route>
-                    <Route  exact path="/MovieItem/:movieId/buy/:playKey" component={MoiveBuy}></Route>
+                    <Route  exact path="/MovieItem/:movieId/value" component={MoiveAbout} ></Route>
+                    <Route  exact path="/MovieItem/:movieId/time" component={MoiveTime} ></Route>
+                    <Route  exact path="/MovieItem/:movieId/buy/:playKey" component={MoiveBuy} ></Route>
                     {/* <Redirect to='/Home'></Redirect> */}
                 </Switch>
             </div>
